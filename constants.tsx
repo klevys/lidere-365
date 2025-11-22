@@ -3,6 +3,8 @@ import React from 'react';
 
 export const WHATSAPP_LINK = "https://wa.me/5563984602383?text=Ol%C3%A1!%20Gostaria%20de%20garantir%20minha%20pr%C3%A9-reserva%20do%20livro%20Lidere%20365%20pelo%20valor%20promocional%20de%20R$%2039,90.";
 
+export const VIDEO_URL = "https://klevysonline.wordpress.com/wp-content/uploads/2025/11/lidere365_video.mp4";
+
 export const IMAGES = {
   // IMPORTANTE: Salve a imagem da capa que você enviou como 'capa-lidere365.png' na pasta public
   bookCover: "/capa-lidere365.png", 
