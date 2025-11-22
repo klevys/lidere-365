@@ -77,7 +77,10 @@ const App: React.FC = () => {
                 R$ 39,90
               </div>
             </div>
-            <Button onClick={handlePreOrder} className="rounded-full py-2 px-6 text-sm h-10 bg-white text-brand-darkBlue hover:bg-slate-200">
+            <Button 
+              onClick={handlePreOrder} 
+              className="rounded-full !py-2 !px-6 !text-sm !h-10 shadow-none"
+            >
               Reservar Agora
             </Button>
           </div>
