@@ -22,7 +22,7 @@ export const COPY = {
     // Designed to be split by period for styling: "White Text. Orange Text."
     headline: "Sua Leitura. Para 2026.",
     subheadline: "Comece o ano com visão renovada. O devocional definitivo para quem deseja crescer como líder na família, no trabalho e no ministério em 2026.",
-    cta: "Garanta sua pré-reserva",
+    cta: "Pré-venda",
     bullets: [
       "Planeje seu crescimento para 2026",
       "Pré-reserva Promocional: R$ 39,90",
@@ -107,7 +107,7 @@ export const COPY = {
   ctaSection: {
     title: "Seu 2026 Começa Agora",
     text: "Garanta seu exemplar da 1ª edição. O estoque de lançamento é limitado.",
-    button: "Garantir minha cópia no WhatsApp",
+    button: "Pré-venda",
     secure: "Compra Segura e Direta"
   }
 };

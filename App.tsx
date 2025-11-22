@@ -81,7 +81,7 @@ const App: React.FC = () => {
               onClick={handlePreOrder} 
               className="rounded-full !py-2 !px-6 !text-sm !h-10 shadow-none"
             >
-              Reservar Agora
+              Pré-venda
             </Button>
           </div>
         </div>
