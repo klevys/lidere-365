@@ -26,7 +26,7 @@ export const Author: React.FC<AuthorProps> = ({ id }) => {
                 <img 
                   src={IMAGES.author} 
                   alt={COPY.author.name} 
-                  className="relative w-full aspect-[4/5] object-cover grayscale hover:grayscale-0 transition-all duration-700 shadow-2xl"
+                  className="relative w-full aspect-[4/5] object-cover object-top grayscale hover:grayscale-0 transition-all duration-700 shadow-2xl"
                 />
                 <div className="absolute bottom-0 left-0 bg-[#0B1120] text-white p-6 max-w-[80%]">
                   <p className="font-serif text-2xl font-bold text-brand-orange">Klevys Silva</p>
