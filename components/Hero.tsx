@@ -1,5 +1,6 @@
+
 import React from 'react';
-import { CheckCircle } from 'lucide-react';
+import { ArrowRight, Star } from 'lucide-react';
 import { Button } from './Button';
 import { COPY, IMAGES, WHATSAPP_LINK } from '../constants';
 
@@ -9,75 +10,89 @@ export const Hero: React.FC = () => {
   };
 
   return (
-    <section className="relative min-h-[90vh] flex items-center pt-10 bg-gradient-to-br from-brand-blue to-brand-darkBlue overflow-hidden text-white">
-      {/* Background Accent */}
-      <div className="absolute top-0 right-0 w-1/2 h-full bg-white/5 skew-x-12 transform origin-top-right backdrop-blur-sm"></div>
-      
-      <div className="container mx-auto px-4 md:px-6 relative z-10">
-        <div className="flex flex-col md:flex-row items-center gap-12 lg:gap-20">
+    <section className="relative min-h-screen flex items-center bg-[#0B1120] text-white overflow-hidden pt-20">
+      {/* Abstract Background Elements */}
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0 pointer-events-none">
+        <div className="absolute top-[-10%] right-[-5%] w-[600px] h-[600px] bg-brand-blue/20 rounded-full blur-[120px]"></div>
+        <div className="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] bg-brand-orange/10 rounded-full blur-[100px]"></div>
+        <div className="absolute top-[20%] left-[10%] w-2 h-2 bg-brand-orange rounded-full animate-pulse"></div>
+        <div className="absolute bottom-[30%] right-[20%] w-3 h-3 bg-brand-blue rounded-full animate-pulse delay-700"></div>
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="grid lg:grid-cols-12 gap-12 items-center">
           
-          {/* Copy Content */}
-          <div className="flex-1 text-center md:text-left space-y-8">
-            <div className="inline-block px-4 py-1 bg-brand-orange/20 text-brand-orange rounded-full text-sm font-bold tracking-wider mb-2 border border-brand-orange/50">
-              PRÉ-VENDA EXCLUSIVA
+          {/* Left Content */}
+          <div className="lg:col-span-7 space-y-8">
+            
+            {/* Badge */}
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm">
+              <Star className="w-4 h-4 text-brand-orange fill-current" />
+              <span className="text-xs md:text-sm font-medium tracking-wide text-slate-300">PRÉ-VENDA EXCLUSIVA</span>
             </div>
-            
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold leading-tight">
-              {COPY.hero.headline.split('.')[0]}.
-              <br />
-              <span className="text-brand-orange">{COPY.hero.headline.split('.')[1]}</span>
+
+            {/* Huge Typography */}
+            <h1 className="text-5xl md:text-7xl xl:text-8xl font-bold tracking-tight leading-[1.1]">
+              Sua Leitura <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-orange to-orange-300">
+                Para 2026.
+              </span>
             </h1>
-            
-            <p className="text-lg md:text-xl text-slate-300 max-w-xl mx-auto md:mx-0 leading-relaxed">
+
+            <p className="text-lg md:text-xl text-slate-400 max-w-xl leading-relaxed font-light border-l-2 border-brand-blue/30 pl-6">
               {COPY.hero.subheadline}
             </p>
 
-            <div className="space-y-2">
-              {COPY.hero.bullets.map((bullet, index) => (
-                <div key={index} className="flex items-center justify-center md:justify-start text-slate-200">
-                  <CheckCircle className="w-5 h-5 text-brand-orange mr-2 flex-shrink-0" />
-                  <span>{bullet}</span>
-                </div>
-              ))}
-            </div>
-
-            <div className="pt-4 flex flex-col lg:flex-row items-center gap-6">
-              <div className="flex flex-col items-center md:items-start w-full">
-                <Button onClick={handlePreOrder} icon className="w-full sm:w-auto shadow-orange-500/20 px-10 py-5 text-xl">
-                  {COPY.hero.cta}
-                </Button>
-                <p className="mt-3 text-xs text-slate-400 uppercase tracking-widest">
-                  Envio em Dezembro • Edição Limitada
-                </p>
+            {/* Action Area */}
+            <div className="flex flex-col sm:flex-row gap-4 pt-4">
+              <Button onClick={handlePreOrder} icon className="bg-brand-orange hover:bg-orange-600 text-white shadow-[0_0_30px_-10px_rgba(255,127,64,0.5)]">
+                {COPY.hero.cta}
+              </Button>
+              <div className="flex items-center justify-center px-6 py-4 rounded-full border border-white/10 text-sm text-slate-400 bg-white/5">
+                <span className="font-mono font-bold text-white mr-2">R$ 39,90</span>
+                <span>na pré-reserva</span>
               </div>
             </div>
-          </div>
 
-          {/* Book Mockup */}
-          <div className="flex-1 flex justify-center relative mt-8 md:mt-0">
-            <div className="relative w-64 md:w-80 lg:w-[420px] aspect-[2/3] transform md:rotate-y-12 md:rotate-x-6 transition-transform hover:rotate-0 duration-700">
-              {/* Glow Effect */}
-              <div className="absolute inset-0 bg-brand-orange blur-3xl opacity-20 rounded-full transform translate-y-10"></div>
-              
-              {/* Book Cover Image Placeholder */}
-              <img 
-                src={IMAGES.bookCover} 
-                alt="Capa do Livro Lidere 365" 
-                className="relative rounded-r-xl rounded-l-sm shadow-2xl border-l-4 border-white/10 object-cover h-full w-full z-10"
-              />
-              
-              {/* Spine Effect for 3D look */}
-              <div className="absolute top-1 bottom-1 left-0 w-4 bg-white/20 z-20 rounded-l-sm backdrop-blur-md"></div>
+            {/* Social Proof Mini */}
+            <div className="pt-8 flex items-center gap-4">
+              <div className="flex -space-x-3">
+                {[1,2,3,4].map(i => (
+                  <div key={i} className="w-10 h-10 rounded-full bg-slate-800 border-2 border-[#0B1120] flex items-center justify-center text-xs text-slate-500 overflow-hidden">
+                    <img src={`https://placehold.co/100x100/333/CCC?text=${i}`} className="w-full h-full object-cover opacity-50" />
+                  </div>
+                ))}
+              </div>
+              <p className="text-sm text-slate-500">Junte-se a centenas de líderes.</p>
             </div>
           </div>
+
+          {/* Right Content (Book Mockup) */}
+          <div className="lg:col-span-5 relative flex justify-center">
+            <div className="relative z-10 w-64 md:w-80 lg:w-[450px] animate-float group">
+               {/* Glow effect behind book */}
+               <div className="absolute inset-0 bg-brand-blue/40 blur-[60px] rounded-full transform scale-90"></div>
+               
+               <div className="relative w-full transition-transform duration-500 hover:scale-105">
+                  <img 
+                    src={IMAGES.bookCover} 
+                    alt="Lidere 365 Capa" 
+                    className="w-full h-auto drop-shadow-2xl"
+                    onError={(e) => {
+                      // Fallback if image not found
+                      e.currentTarget.src = "https://klevysonline.wordpress.com/wp-content/uploads/2025/11/livro-1.png";
+                    }}
+                  />
+               </div>
+            </div>
+            
+            {/* Decorative Elements */}
+            <div className="absolute -bottom-10 -right-10 text-[120px] font-bold text-white/5 leading-none select-none z-0">
+              365
+            </div>
+          </div>
+
         </div>
-      </div>
-      
-      {/* Curve Divider */}
-      <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none">
-        <svg className="relative block w-full h-[60px] md:h-[100px]" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-            <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" className="fill-slate-950"></path>
-        </svg>
       </div>
     </section>
   );

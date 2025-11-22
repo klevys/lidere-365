@@ -4,11 +4,15 @@ import React from 'react';
 export const WHATSAPP_LINK = "https://wa.me/5563984602383?text=Ol%C3%A1!%20Gostaria%20de%20garantir%20minha%20pr%C3%A9-reserva%20do%20livro%20Lidere%20365%20pelo%20valor%20promocional%20de%20R$%2039,90.";
 
 export const IMAGES = {
-  // REPLACE THESE WITH THE ACTUAL UPLOADED IMAGE URLS
-  bookCover: "https://picsum.photos/id/24/600/900", 
-  author: "https://picsum.photos/id/64/800/800", 
-  backgroundHero: "https://picsum.photos/id/364/1920/1080",
-  videoThumbnail: "https://picsum.photos/id/42/800/450"
+  // IMPORTANTE: Salve a imagem da capa que você enviou como 'capa-lidere365.png' na pasta public
+  bookCover: "/capa-lidere365.png", 
+  
+  // Foto do autor atualizada
+  author: "https://klevysonline.wordpress.com/wp-content/uploads/2025/11/autor.jpeg", 
+  
+  // Placeholders para o resto
+  backgroundHero: "https://placehold.co/1920x1080/003f5f/005f8f?text=Background",
+  videoThumbnail: "https://placehold.co/1280x720/003f5f/ffffff?text=Apresentacao+Lidere+365"
 };
 
 export const COPY = {

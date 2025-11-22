@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react';
 import { Hero } from './components/Hero';
 import { VideoSection } from './components/VideoSection';
@@ -12,20 +13,34 @@ import { CTASection } from './components/CTASection';
 import { Footer } from './components/Footer';
 import { Button } from './components/Button';
 import { WHATSAPP_LINK } from './constants';
-import { MessageCircle } from 'lucide-react';
+import { MessageCircle, BookOpen } from 'lucide-react';
+
+// Simple Navbar Component
+const Navbar = () => (
+  <nav className="absolute top-0 left-0 w-full z-50 py-6 border-b border-white/5">
+    <div className="container mx-auto px-4 flex justify-between items-center">
+      <div className="flex items-center gap-2 font-serif font-bold text-xl text-white">
+        <div className="w-8 h-8 bg-brand-orange rounded-lg flex items-center justify-center text-white">
+          <BookOpen className="w-5 h-5" />
+        </div>
+        LIDERE 365
+      </div>
+      <div className="hidden md:flex gap-6 text-sm font-medium text-slate-300">
+        <a href="#sobre" className="hover:text-white transition-colors">O Livro</a>
+        <a href="#autor" className="hover:text-white transition-colors">Autor</a>
+        <a href="#faq" className="hover:text-white transition-colors">Dúvidas</a>
+      </div>
+    </div>
+  </nav>
+);
 
 const App: React.FC = () => {
   const [showStickyCTA, setShowStickyCTA] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 600) {
-        setShowStickyCTA(true);
-      } else {
-        setShowStickyCTA(false);
-      }
+      setShowStickyCTA(window.scrollY > 800);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -35,47 +50,37 @@ const App: React.FC = () => {
   };
 
   return (
-    <main className="font-sans text-slate-900 antialiased selection:bg-brand-orange selection:text-white">
-      {/* 1. Visual Focus: Book */}
+    <main className="font-sans text-slate-900 selection:bg-brand-orange selection:text-white bg-[#f8fafc]">
+      <Navbar />
+      
       <Hero />
-
-      {/* 2. Dedicated Video Section */}
-      <VideoSection />
-      
-      {/* 3. Visual Focus: Author */}
-      <Author />
-      
-      {/* 4. The Problem */}
+      <div id="sobre"><VideoSection /></div>
+      <Author id="autor" />
       <PainPoints />
-      
-      {/* 5. The Solution */}
       <Transformation />
-      
-      {/* 6. What's inside */}
       <BookDetails />
-      
-      {/* 7. Validation */}
       <SocialProof />
       <Benefits />
-      
-      {/* 8. Closing */}
-      <FAQ />
+      <div id="faq"><FAQ /></div>
       <CTASection />
       <Footer />
 
-      {/* Sticky Mobile/Desktop CTA */}
-      <div className={`fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 p-4 shadow-2xl z-50 transition-transform duration-300 transform ${showStickyCTA ? 'translate-y-0' : 'translate-y-full'}`}>
-        <div className="container mx-auto flex items-center justify-between md:justify-center gap-4">
-          <div className="hidden md:block font-bold text-brand-darkBlue text-lg">
-            Lidere 365 - Leitura para 2026: <span className="text-brand-orange">R$ 39,90</span>
+      {/* Modern Glassmorphism Sticky CTA */}
+      <div className={`fixed bottom-6 left-0 w-full z-50 px-4 transition-all duration-500 transform ${showStickyCTA ? 'translate-y-0 opacity-100' : 'translate-y-24 opacity-0'}`}>
+        <div className="container mx-auto max-w-3xl">
+          <div className="glass-dark rounded-full p-2 pr-3 flex items-center justify-between shadow-2xl ring-1 ring-white/10">
+            <div className="flex items-center gap-3 pl-4">
+              <div className="hidden sm:block text-white font-bold">
+                Lidere 365 <span className="font-normal text-slate-400">| Pré-venda</span>
+              </div>
+              <div className="text-brand-orange font-bold text-lg">
+                R$ 39,90
+              </div>
+            </div>
+            <Button onClick={handlePreOrder} className="rounded-full py-2 px-6 text-sm h-10 bg-white text-brand-darkBlue hover:bg-slate-200">
+              Reservar Agora
+            </Button>
           </div>
-          <div className="md:hidden font-bold text-brand-darkBlue text-sm">
-            Leitura 2026: <span className="text-brand-orange">R$ 39,90</span>
-          </div>
-          <Button onClick={handlePreOrder} className="w-auto text-sm md:text-base py-3 px-6 flex items-center">
-            <MessageCircle className="w-4 h-4 mr-2" />
-            RESERVAR AGORA
-          </Button>
         </div>
       </div>
     </main>
