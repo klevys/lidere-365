@@ -73,13 +73,16 @@ const App: React.FC = () => {
               <div className="hidden sm:block text-white font-bold">
                 Lidere 365 <span className="font-normal text-slate-400">| Pré-venda</span>
               </div>
-              <div className="text-brand-orange font-bold text-lg">
-                R$ 39,90
+              <div className="flex flex-col items-end leading-none">
+                <div className="text-brand-orange font-bold text-lg">
+                  R$ 39,90
+                </div>
+                <span className="text-[10px] text-slate-400 font-medium">Até 30/12</span>
               </div>
             </div>
             <Button 
               onClick={handlePreOrder} 
-              className="rounded-full !py-2 !px-6 !text-sm !h-10 shadow-none"
+              className="bg-brand-orange text-white rounded-full !py-2 !px-6 !text-sm !h-10 shadow-none hover:bg-orange-600 transition-colors"
             >
               Pré-venda
             </Button>

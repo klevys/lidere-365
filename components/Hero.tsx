@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { ArrowRight, Star } from 'lucide-react';
+import { ArrowRight, Star, Clock } from 'lucide-react';
 import { Button } from './Button';
 import { COPY, IMAGES, WHATSAPP_LINK } from '../constants';
 
@@ -48,9 +48,17 @@ export const Hero: React.FC = () => {
               <Button onClick={handlePreOrder} icon className="bg-brand-orange hover:bg-orange-600 text-white shadow-[0_0_30px_-10px_rgba(255,127,64,0.5)]">
                 {COPY.hero.cta}
               </Button>
-              <div className="flex items-center justify-center px-6 py-4 rounded-full border border-white/10 text-sm text-slate-400 bg-white/5">
-                <span className="font-mono font-bold text-white mr-2">R$ 39,90</span>
-                <span>na pré-reserva</span>
+              
+              {/* Pricing Info */}
+              <div className="flex flex-col justify-center px-6 py-2 rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm">
+                <div className="flex items-baseline gap-2">
+                  <span className="font-mono font-bold text-white text-lg">R$ 39,90</span>
+                  <span className="text-xs text-slate-400 line-through opacity-60">R$ 59,90</span>
+                </div>
+                <div className="flex items-center gap-1.5 text-red-400 text-xs font-semibold uppercase tracking-wide">
+                  <Clock className="w-3 h-3" />
+                  <span>Só até 30/12</span>
+                </div>
               </div>
             </div>
 

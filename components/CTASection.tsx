@@ -2,7 +2,7 @@
 import React from 'react';
 import { Button } from './Button';
 import { WHATSAPP_LINK, IMAGES, COPY } from '../constants';
-import { MessageCircle, ArrowRight, ShieldCheck } from 'lucide-react';
+import { MessageCircle, ArrowRight, ShieldCheck, AlertTriangle } from 'lucide-react';
 
 export const CTASection: React.FC = () => {
   const handlePreOrder = () => {
@@ -19,14 +19,15 @@ export const CTASection: React.FC = () => {
         <div className="bg-white rounded-3xl p-8 md:p-16 shadow-2xl max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12">
           
           <div className="w-full md:w-1/2">
-            <div className="inline-block px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-bold uppercase tracking-wider mb-6">
-              Primeiro Lote Disponível
+            <div className="inline-flex items-center gap-2 px-3 py-1 bg-red-100 text-red-700 rounded-full text-xs font-bold uppercase tracking-wider mb-6">
+              <AlertTriangle className="w-3 h-3" />
+              Oferta válida até 30/12
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
               Seu 2026 começa <br/>agora.
             </h2>
             <p className="text-slate-600 text-lg mb-8 leading-relaxed">
-              Não deixe para janeiro o que vai definir a trajetória de todo o seu ano. Garanta sua cópia da 1ª edição com valor especial.
+              Não deixe para janeiro o que vai definir a trajetória de todo o seu ano. Garanta sua cópia da 1ª edição com valor especial antes do reajuste.
             </p>
             
             <div className="flex flex-col gap-4">
@@ -54,9 +55,12 @@ export const CTASection: React.FC = () => {
             />
             
             {/* Price Tag */}
-            <div className="absolute -bottom-6 -right-6 bg-[#0B1120] text-white p-6 rounded-2xl shadow-xl z-20 animate-float delay-100">
-              <p className="text-xs text-slate-400 uppercase">Valor Promocional</p>
-              <p className="text-3xl font-bold text-brand-orange">R$ 39,90</p>
+            <div className="absolute -bottom-6 -right-6 bg-[#0B1120] text-white p-6 rounded-2xl shadow-xl z-20 animate-float delay-100 border border-white/10">
+              <p className="text-xs text-slate-400 uppercase mb-1">Valor Promocional</p>
+              <p className="text-3xl font-bold text-brand-orange leading-none">R$ 39,90</p>
+              <div className="mt-2 pt-2 border-t border-white/10 text-[10px] text-red-400 font-bold uppercase tracking-wide text-center">
+                Sobe em 01/01
+              </div>
             </div>
           </div>
 

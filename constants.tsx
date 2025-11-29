@@ -25,7 +25,7 @@ export const COPY = {
     cta: "Pré-venda",
     bullets: [
       "Planeje seu crescimento para 2026",
-      "Pré-reserva Promocional: R$ 39,90",
+      "Valor de R$ 39,90 garantido só até 30/12",
       "Atendimento Exclusivo via WhatsApp"
     ]
   },
@@ -88,12 +88,12 @@ export const COPY = {
   },
   faq: [
     {
-      question: "Quando receberei o livro?",
-      answer: "O livro estará disponível na primeira quinzena de dezembro, a tempo de você se preparar para o início de 2026."
+      question: "Até quando vale o preço de R$ 39,90?",
+      answer: "Este valor promocional é exclusivo para a pré-venda e válido somente até o dia 30/12. A partir de 1º de janeiro, o valor será reajustado."
     },
     {
-      question: "Qual o valor da pré-reserva?",
-      answer: "Aproveite o valor promocional de R$ 39,90 exclusivo para a pré-venda pelo WhatsApp."
+      question: "Quando receberei o livro?",
+      answer: "O livro estará disponível na primeira quinzena de dezembro, a tempo de você se preparar para o início de 2026."
     },
     {
       question: "É um livro físico?",
@@ -102,7 +102,7 @@ export const COPY = {
   ],
   guarantee: {
     title: "Invista na sua Liderança",
-    text: "Este é o melhor investimento que você pode fazer para iniciar 2026 com o pé direito e o coração alinhado."
+    text: "Garanta o menor preço do ano reservando agora. O valor subirá em 01/01."
   },
   ctaSection: {
     title: "Seu 2026 Começa Agora",
