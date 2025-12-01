@@ -1,7 +1,7 @@
 import { BookOpen, Shield, Target, Heart, Battery, Users, ArrowRight } from 'lucide-react';
 import React from 'react';
 
-export const WHATSAPP_LINK = "https://wa.me/5563984602383?text=Ol%C3%A1!%20Gostaria%20de%20garantir%20minha%20pr%C3%A9-reserva%20do%20livro%20Lidere%20365%20pelo%20valor%20promocional%20de%20R$%2039,90.";
+export const WHATSAPP_LINK = "https://wa.me/5563984602383?text=Ol%C3%A1!%20Gostaria%20de%20adquirir%20o%20livro%20Lidere%20365%20pelo%20valor%20de%20R$%2069,60.";
 
 export const VIDEO_URL = "https://klevysonline.wordpress.com/wp-content/uploads/2025/11/lidere365_video.mp4";
 
@@ -22,10 +22,10 @@ export const COPY = {
     // Designed to be split by period for styling: "White Text. Orange Text."
     headline: "Sua Leitura. Para 2026.",
     subheadline: "Comece o ano com visão renovada. O devocional definitivo para quem deseja crescer como líder na família, no trabalho e no ministério em 2026.",
-    cta: "Pré-venda",
+    cta: "Adquirir Agora",
     bullets: [
       "Planeje seu crescimento para 2026",
-      "Valor de R$ 39,90 garantido só até 30/12",
+      "Edição oficial de lançamento",
       "Atendimento Exclusivo via WhatsApp"
     ]
   },
@@ -88,26 +88,26 @@ export const COPY = {
   },
   faq: [
     {
-      question: "Até quando vale o preço de R$ 39,90?",
-      answer: "Este valor promocional é exclusivo para a pré-venda e válido somente até o dia 30/12. A partir de 1º de janeiro, o valor será reajustado."
+      question: "O livro é físico ou digital?",
+      answer: "É um livro físico de alta qualidade (capa brochura), pensado para ser seu companheiro de cabeceira durante todo o ano."
     },
     {
-      question: "Quando receberei o livro?",
-      answer: "O livro estará disponível na primeira quinzena de dezembro, a tempo de você se preparar para o início de 2026."
+      question: "Como faço para comprar?",
+      answer: "Basta clicar no botão de compra. Você será direcionado para o WhatsApp oficial onde nossa equipe finalizará seu pedido com segurança."
     },
     {
-      question: "É um livro físico?",
-      answer: "Sim, é um livro físico de alta qualidade, pensado para ser seu companheiro de cabeceira durante todo o ano."
+      question: "Enviam para todo o Brasil?",
+      answer: "Sim! Enviamos para todo o território nacional. O valor do frete pode ser consultado diretamente no atendimento."
     }
   ],
   guarantee: {
     title: "Invista na sua Liderança",
-    text: "Garanta o menor preço do ano reservando agora. O valor subirá em 01/01."
+    text: "Adquira uma ferramenta que vai transformar sua rotina em 2026."
   },
   ctaSection: {
     title: "Seu 2026 Começa Agora",
-    text: "Garanta seu exemplar da 1ª edição. O estoque de lançamento é limitado.",
-    button: "Pré-venda",
+    text: "Garanta seu exemplar. Uma leitura indispensável para o próximo ano.",
+    button: "Adquirir Agora",
     secure: "Compra Segura e Direta"
   }
 };

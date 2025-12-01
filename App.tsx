@@ -13,7 +13,7 @@ import { CTASection } from './components/CTASection';
 import { Footer } from './components/Footer';
 import { Button } from './components/Button';
 import { WHATSAPP_LINK } from './constants';
-import { MessageCircle, BookOpen } from 'lucide-react';
+import { BookOpen } from 'lucide-react';
 
 // Simple Navbar Component
 const Navbar = () => (
@@ -45,7 +45,7 @@ const App: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handlePreOrder = () => {
+  const handlePurchase = () => {
     window.open(WHATSAPP_LINK, '_blank');
   };
 
@@ -71,20 +71,19 @@ const App: React.FC = () => {
           <div className="glass-dark rounded-full p-2 pr-3 flex items-center justify-between shadow-2xl ring-1 ring-white/10">
             <div className="flex items-center gap-3 pl-4">
               <div className="hidden sm:block text-white font-bold">
-                Lidere 365 <span className="font-normal text-slate-400">| Pré-venda</span>
+                Lidere 365 <span className="font-normal text-slate-400">| Disponível</span>
               </div>
               <div className="flex flex-col items-end leading-none">
                 <div className="text-brand-orange font-bold text-lg">
-                  R$ 39,90
+                  R$ 69,60
                 </div>
-                <span className="text-[10px] text-slate-400 font-medium">Até 30/12</span>
               </div>
             </div>
             <Button 
-              onClick={handlePreOrder} 
+              onClick={handlePurchase} 
               className="bg-brand-orange text-white rounded-full !py-2 !px-6 !text-sm !h-10 shadow-none hover:bg-orange-600 transition-colors"
             >
-              Pré-venda
+              Adquirir
             </Button>
           </div>
         </div>

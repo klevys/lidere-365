@@ -1,11 +1,11 @@
 
 import React from 'react';
-import { ArrowRight, Star, Clock } from 'lucide-react';
+import { ArrowRight, Star, CheckCircle } from 'lucide-react';
 import { Button } from './Button';
 import { COPY, IMAGES, WHATSAPP_LINK } from '../constants';
 
 export const Hero: React.FC = () => {
-  const handlePreOrder = () => {
+  const handlePurchase = () => {
     window.open(WHATSAPP_LINK, '_blank');
   };
 
@@ -26,9 +26,9 @@ export const Hero: React.FC = () => {
           <div className="lg:col-span-7 space-y-8">
             
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-blue/20 border border-brand-blue/30 backdrop-blur-sm">
               <Star className="w-4 h-4 text-brand-orange fill-current" />
-              <span className="text-xs md:text-sm font-medium tracking-wide text-slate-300">PRÉ-VENDA EXCLUSIVA</span>
+              <span className="text-xs md:text-sm font-medium tracking-wide text-white">LANÇAMENTO OFICIAL</span>
             </div>
 
             {/* Huge Typography */}
@@ -45,19 +45,18 @@ export const Hero: React.FC = () => {
 
             {/* Action Area */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <Button onClick={handlePreOrder} icon className="bg-brand-orange hover:bg-orange-600 text-white shadow-[0_0_30px_-10px_rgba(255,127,64,0.5)]">
+              <Button onClick={handlePurchase} icon className="bg-brand-orange hover:bg-orange-600 text-white shadow-[0_0_30px_-10px_rgba(255,127,64,0.5)]">
                 {COPY.hero.cta}
               </Button>
               
               {/* Pricing Info */}
               <div className="flex flex-col justify-center px-6 py-2 rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm">
                 <div className="flex items-baseline gap-2">
-                  <span className="font-mono font-bold text-white text-lg">R$ 39,90</span>
-                  <span className="text-xs text-slate-400 line-through opacity-60">R$ 59,90</span>
+                  <span className="font-mono font-bold text-white text-lg">R$ 69,60</span>
                 </div>
-                <div className="flex items-center gap-1.5 text-red-400 text-xs font-semibold uppercase tracking-wide">
-                  <Clock className="w-3 h-3" />
-                  <span>Só até 30/12</span>
+                <div className="flex items-center gap-1.5 text-green-400 text-xs font-semibold uppercase tracking-wide">
+                  <CheckCircle className="w-3 h-3" />
+                  <span>Disponível</span>
                 </div>
               </div>
             </div>
