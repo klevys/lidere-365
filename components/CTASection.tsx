@@ -53,7 +53,7 @@ export const CTASection: React.FC = () => {
             {/* Price Tag */}
             <div className="absolute -bottom-6 -right-6 bg-[#0B1120] text-white p-6 rounded-2xl shadow-xl z-20 animate-float delay-100 border border-white/10">
               <p className="text-xs text-slate-400 uppercase mb-1">Valor Unitário</p>
-              <p className="text-3xl font-bold text-brand-orange leading-none">R$ 69,60</p>
+              <p className="text-3xl font-bold text-brand-orange leading-none">R$ 69,90</p>
             </div>
           </div>
 

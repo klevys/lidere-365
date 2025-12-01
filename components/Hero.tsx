@@ -52,7 +52,7 @@ export const Hero: React.FC = () => {
               {/* Pricing Info */}
               <div className="flex flex-col justify-center px-6 py-2 rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm">
                 <div className="flex items-baseline gap-2">
-                  <span className="font-mono font-bold text-white text-lg">R$ 69,60</span>
+                  <span className="font-mono font-bold text-white text-lg">R$ 69,90</span>
                 </div>
                 <div className="flex items-center gap-1.5 text-green-400 text-xs font-semibold uppercase tracking-wide">
                   <CheckCircle className="w-3 h-3" />
@@ -65,7 +65,7 @@ export const Hero: React.FC = () => {
             <div className="pt-8 flex items-center gap-4">
               <div className="flex -space-x-3">
                 {[1,2,3,4].map(i => (
-                  <div key={i} className="w-10 h-10 rounded-full bg-slate-800 border-2 border-[#0B1120] flex items-center justify-center text-xs text-slate-500 overflow-hidden">
+                  <div key={i} className="w-10 h-10 rounded-full bg-slate-800 border-2 border-[#0B1120] flex items-center justify-center text-xs text-slate-50 overflow-hidden">
                     <img src={`https://placehold.co/100x100/333/CCC?text=${i}`} className="w-full h-full object-cover opacity-50" />
                   </div>
                 ))}

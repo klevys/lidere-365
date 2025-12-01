@@ -1,7 +1,7 @@
 import { BookOpen, Shield, Target, Heart, Battery, Users, ArrowRight } from 'lucide-react';
 import React from 'react';
 
-export const WHATSAPP_LINK = "https://wa.me/5563984602383?text=Ol%C3%A1!%20Gostaria%20de%20adquirir%20o%20livro%20Lidere%20365%20pelo%20valor%20de%20R$%2069,60.";
+export const WHATSAPP_LINK = "https://wa.me/5563984602383?text=Ol%C3%A1!%20Gostaria%20de%20adquirir%20o%20livro%20Lidere%20365%20pelo%20valor%20de%20R$%2069,90.";
 
 export const VIDEO_URL = "https://klevysonline.wordpress.com/wp-content/uploads/2025/11/lidere365_video.mp4";
 

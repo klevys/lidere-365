@@ -75,7 +75,7 @@ const App: React.FC = () => {
               </div>
               <div className="flex flex-col items-end leading-none">
                 <div className="text-brand-orange font-bold text-lg">
-                  R$ 69,60
+                  R$ 69,90
                 </div>
               </div>
             </div>
